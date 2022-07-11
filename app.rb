@@ -1,11 +1,12 @@
 require 'bundler'
+require 'sinatra/activerecord'
 Bundler.require
 
 require_relative 'lib/basic_helpers.rb'
-
+set :database_file, 'config/database.yml'
 
 class BasicApp < Sinatra::Base
-  helpers BasicHelpers
+  include BasicHelpers
   get '/' do
     'Hello world!'
   end
