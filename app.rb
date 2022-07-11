@@ -1,7 +1,3 @@
-require 'bundler'
-require 'sinatra/activerecord'
-Bundler.require
-
 require_relative 'lib/basic_helpers.rb'
 require_relative 'lib/models/todo.rb'
 set :database_file, 'config/database.yml'
